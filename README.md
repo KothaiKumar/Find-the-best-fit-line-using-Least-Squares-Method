@@ -27,41 +27,41 @@ RegisterNumber: 212222240051
 import numpy as np
 import matplotlib.pyplot as plt
 
-# proceeding input data
+# Proceeding input data
 
 x=np.array(eval(input()))
 y=np.array(eval(input()))
 
-# mean
+# Mean
 
 x_mean=np.mean(x)
 y_mean=np.mean(y)
 num=0
 denom=0
 
-# to find sum of(xi-x')&(yi-y')&(xi-x')^2
+# To find sum of(xi-x')&(yi-y')&(xi-x')^2
 
 for i in range(len(x)):
     num+=(x[i]-x_mean*(y[i]-y_mean))
     denom+=(x[i]-x_mean)**2
     m=num/denom
 
-# calculate intercept
+# Calculate intercept
 
 b=y_mean-m*x_mean
 print(m,b)
 
-# line equation
+# Line equation
 
 y_predicted=m*x+b
 print(y_predicted)
 
-# to plot graph
+# To plot graph
 
 plt.scatter(x,y)
 plt.plot(x,y_predicted,color='red')
 plt.show()
-```
+
 
 ## Output:
 
